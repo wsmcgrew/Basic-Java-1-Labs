@@ -1,36 +1,32 @@
 /**
- * Exercise 4
+ * Exercise 5
  * Lab 3 
  * Author: William McGrew
  * **/
  
  import java.util.Scanner;
  
- public class Exercise4
+ public class Exercise5
  {
      public static void main(String[] args){
      
     Scanner input = new Scanner(System.in);
-    int number;
+    int number = 0;
     float average;
     float totalOfGrades = 0;
-    float grade; 
+    float grade = 0;
     
-    System.out.println("enter a number");
-    number = input.nextInt();
-    
-    int c = 0;
-    while(c < number){
+    while(grade != -1){
+        System.out.println("enter a grade or -1 to quit");
+        grade = input.nextFloat();}
         
-        System.out.println("enter a grade");
-        grade = input.nextFloat();
-        
-        totalOfGrades = totalOfGrades + grade;
-        c = c + 1;
+        if(grade != -1){
+            totalOfGrades = totalOfGrades + grade;
+            number = number + 1;
     }
     average = totalOfGrades / (float) number;
     
-    System.out.println("average is: " + average);
+    System.out.println("average is:" + average);
     
      }
  }
